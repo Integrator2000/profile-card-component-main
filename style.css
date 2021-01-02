@@ -1,0 +1,112 @@
+/* 
+    Largeur de la carde en desktop : 350px
+*/ 
+
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --body-bg-color : #19a1ad;
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+
+body { 
+    font-family: 'Kumbh Sans', sans-serif;   
+}
+
+.container {
+    align-content: center;
+    background-color: var(--Dark-cyan);
+    background-size: auto, contain;
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-position: -200px -400px , 850px 400px ;
+    background-repeat: no-repeat;
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.grid-card {
+    background-color: #fff;
+    border-radius: 15px;
+    min-width: 400px;
+    overflow: hidden;
+}
+
+.banner {
+    background-image: url(images/bg-pattern-card.svg);
+    border-bottom: 1px solid #3e81897a;
+    min-height: 150px;
+}
+
+.banner img {
+    background-color: #fff;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    display: block;
+    margin:auto;
+    position: relative;
+    top: 87px;
+    min-width: 120px;
+}
+
+.id {
+    border: 1px solid hsla(227, 10%, 46%, 0.219);
+    text-align: center;
+}
+
+.id-name{
+    font-size : 20px;
+    font-weight: bolder;
+    margin: 90px 0 10px;
+}
+
+.id-name span {
+    color: var(--Dark-gray);
+    font-size : 20px;
+    font-weight: 400;
+}
+
+.city {
+    color: var(--Dark-gray);
+    font-size : 20px;
+    font-weight: bolder;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+.stats {
+    display: grid;
+    grid-template-columns : repeat(3, 1fr);
+    padding : 29px;
+    text-align: center;
+}
+
+.stats p {
+    margin: 8px 0 0px 0;
+    color: var(--Dark-gray);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.count {
+    font-size : 20px;
+    font-weight: bolder;
+}
+
+@media(max-width: 400px){
+
+    .container {        
+        background-position: -800px -600px , 
+        200px 100px ;
+    }
+    .grid-card {
+        min-width:350px;
+        margin: 10px;
+    }
+}
